@@ -1,0 +1,33 @@
+:root { --pink:#e9899b; --deep:#5b4650; --cream:#fff9f5; --line:#f1dfe1; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--deep); background:#fff; font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; line-height:1.8; }
+a { color:inherit; text-decoration:none; }
+.container { width:min(1080px, calc(100% - 40px)); margin:auto; }
+.site-header { background:#fff; border-bottom:1px solid var(--line); }
+.header-inner { display:flex; align-items:center; justify-content:space-between; min-height:72px; }
+.logo { color:var(--pink); font-size:1.35rem; font-weight:800; letter-spacing:.08em; }
+.logo span { color:var(--deep); }
+nav { display:flex; gap:28px; font-size:.9rem; }
+nav a:hover { color:var(--pink); }
+.hero { background:linear-gradient(120deg,#fff7f2 0%,#fff 65%); padding:110px 0 120px; }
+.hero-content { text-align:center; }
+.eyebrow,.section-label { color:var(--pink); font-size:.78rem; font-weight:700; letter-spacing:.18em; }
+h1 { margin:12px 0 20px; font-size:clamp(2.2rem,6vw,4.2rem); line-height:1.35; letter-spacing:.04em; }
+h1 span { color:var(--pink); }
+.lead { max-width:620px; margin:0 auto 32px; }
+.button { display:inline-block; border-radius:999px; padding:12px 30px; color:#fff; background:var(--pink); box-shadow:0 8px 18px #e9899b33; font-weight:700; transition:transform .2s, opacity .2s; }
+.button:hover { opacity:.85; transform:translateY(-2px); }
+.section { padding:88px 0; text-align:center; }
+.section h2 { margin:4px 0 16px; font-size:clamp(1.6rem,3vw,2.3rem); }
+.section-lead { max-width:680px; margin:auto; }
+.section-soft { background:var(--cream); }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:36px; }
+.card { padding:32px 24px; background:#fff; border:1px solid var(--line); border-radius:18px; }
+.card-icon { color:var(--pink); font-size:2rem; }
+.card h3 { margin:10px 0 4px; }
+.card p { margin:0; font-size:.92rem; }
+.contact p:not(.section-label) { margin-bottom:24px; }
+.button-secondary { background:#fff; color:var(--pink); border:1px solid var(--pink); box-shadow:none; }
+.site-footer { padding:24px; color:#987e85; background:var(--cream); text-align:center; font-size:.8rem; }
+@media (max-width:600px) { .container { width:min(100% - 28px,1080px); } .header-inner { min-height:62px; } nav { gap:10px; font-size:.72rem; } .hero { padding:76px 0 84px; } .cards { grid-template-columns:1fr; } .section { padding:64px 0; } }
