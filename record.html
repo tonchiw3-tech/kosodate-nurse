@@ -7,7 +7,25 @@
 </head>
 <body>
   <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html" aria-label="子育てナース ホーム">子育て<span>ナース</span></a><nav aria-label="メインナビゲーション"><a href="index.html#about">サイトについて</a><a href="index.html#support">サポート</a><a href="index.html#contact">お問い合わせ</a></nav></div></header>
-  <main><section class="page-hero"><div class="container"><p class="section-label">RECORD</p><h1>今日を残す</h1><p class="lead">今日の看護経験や気づきを音声で記録</p></div></section><section class="page-content container"><p>ここに看護経験や気づきを記録する機能を追加できます。</p><a class="back-link" href="index.html">← トップへ戻る</a></section></main>
-  <footer class="site-footer"><p>&copy; <span id="current-year">2026</span> 子育てナース</p></footer><script src="js/script.js"></script>
+  <main><section class="page-hero"><div class="container"><p class="section-label">RECORD</p><h1>今日を残す</h1><p class="lead">今日の看護経験や気づきを音声で記録</p></div></section>
+    <section class="record-area container" aria-label="看護経験の記録">
+      <div class="calendar-card">
+        <div class="calendar-heading"><button class="month-button" id="previous-month" type="button" aria-label="前月">＜</button><h2 id="calendar-month"></h2><button class="month-button" id="next-month" type="button" aria-label="次月">＞</button></div>
+        <div class="calendar-weekdays" aria-hidden="true"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="月間カレンダー"></div>
+        <p class="calendar-note"><span class="record-dot" aria-hidden="true"></span> 記録あり</p>
+      </div>
+      <section class="entry-panel" id="entry-panel" hidden aria-live="polite">
+        <h2 id="entry-title"></h2>
+        <p class="entry-hint" id="entry-hint">声で残すことも、キーボードで入力することもできます。</p>
+        <div class="voice-actions"><button class="voice-button" id="start-voice" type="button">🎤 <span>音声入力を開始</span></button><button class="stop-button" id="stop-voice" type="button" disabled>停止</button></div>
+        <p class="voice-status" id="voice-status" role="status"></p>
+        <label class="visually-hidden" for="record-text">看護経験や気づき</label><textarea id="record-text" rows="7" placeholder="今日の看護経験や気づきを入力してください"></textarea>
+        <button class="save-button" id="save-record" type="button">保存する</button>
+      </section>
+      <a class="back-link" href="index.html">← トップへ戻る</a>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; <span id="current-year">2026</span> 子育てナース</p></footer><script src="js/script.js"></script><script src="js/record.js"></script>
 </body>
 </html>

@@ -2,12 +2,28 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="子育てと仕事の工夫や体験を共有するページ"><title>みんなとつながる | 子育てナース</title>
+  <meta name="description" content="子育て前・子育て中・子育て後のナースの工夫や体験を知るページ"><title>みんなとつながる | 子育てナース</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html" aria-label="子育てナース ホーム">子育て<span>ナース</span></a><nav aria-label="メインナビゲーション"><a href="index.html#about">サイトについて</a><a href="index.html#support">サポート</a><a href="index.html#contact">お問い合わせ</a></nav></div></header>
-  <main><section class="page-hero"><div class="container"><p class="section-label">COMMUNITY</p><h1>みんなとつながる</h1><p class="lead">子育てと仕事の工夫や体験を共有</p></div></section><section class="page-content container"><p>ここに子育てと仕事の工夫や体験を共有する場を追加できます。</p><a class="back-link" href="index.html">← トップへ戻る</a></section></main>
-  <footer class="site-footer"><p>&copy; <span id="current-year">2026</span> 子育てナース</p></footer><script src="js/script.js"></script>
+  <main>
+    <section class="page-hero"><div class="container"><p class="section-label">COMMUNITY</p><h1>みんなとつながる</h1><p class="lead">子育ての時期に合わせて、先輩ナースの工夫を見てみよう</p></div></section>
+    <section class="community-content container">
+      <div class="community-stages" aria-label="子育て段階を選択">
+        <button class="community-stage is-selected" type="button" data-stage="before" aria-pressed="true"><span>子育て前</span><small>これからの働き方や、妊娠・出産前に知っておきたい工夫</small></button>
+        <button class="community-stage" type="button" data-stage="during" aria-pressed="false"><span>子育て中</span><small>保育園・夜勤・急な発熱など、仕事と育児を両立する工夫</small></button>
+        <button class="community-stage" type="button" data-stage="after" aria-pressed="false"><span>子育て後</span><small>仕事のペースを戻すときや、学び直し・キャリアの工夫</small></button>
+      </div>
+      <section class="community-posts" aria-labelledby="community-posts-title"><h2 id="community-posts-title">子育て前の工夫</h2><div id="community-post-list" class="community-post-list"></div></section>
+      <div class="community-share"><button class="button" id="open-community-form" type="button">私の工夫を共有する</button></div>
+      <section class="community-form-panel" id="community-form-panel" hidden aria-labelledby="community-form-title">
+        <h2 id="community-form-title">工夫・体験を投稿する</h2><p class="community-notice">個人や勤務先、患者さんが特定できる情報は入力しないでください。</p>
+        <form id="community-form"><label for="post-stage">子育て段階</label><select id="post-stage" name="stage" required><option value="before">子育て前</option><option value="during">子育て中</option><option value="after">子育て後</option></select><label for="post-theme">テーマ</label><input id="post-theme" name="theme" required><label for="post-title">タイトル</label><input id="post-title" name="title" required><label for="post-content">工夫・体験</label><textarea id="post-content" name="content" rows="5" required></textarea><label for="post-nickname">ニックネーム</label><input id="post-nickname" name="nickname" required><button class="save-button" type="submit">投稿を追加する</button></form>
+      </section>
+      <a class="back-link" href="index.html">← トップへ戻る</a>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; <span id="current-year">2026</span> 子育てナース</p></footer><script src="js/script.js"></script><script src="js/community.js"></script>
 </body>
 </html>

@@ -7,7 +7,21 @@
 </head>
 <body>
   <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html" aria-label="子育てナース ホーム">子育て<span>ナース</span></a><nav aria-label="メインナビゲーション"><a href="index.html#about">サイトについて</a><a href="index.html#support">サポート</a><a href="index.html#contact">お問い合わせ</a></nav></div></header>
-  <main><section class="page-hero"><div class="container"><p class="section-label">LEARNING</p><h1>今日から学ぶ</h1><p class="lead">記録した経験に合う看護記事や知識を紹介</p></div></section><section class="page-content container"><p>ここに経験に合わせた看護記事や知識を掲載できます。</p><a class="back-link" href="index.html">← トップへ戻る</a></section></main>
-  <footer class="site-footer"><p>&copy; <span id="current-year">2026</span> 子育てナース</p></footer><script src="js/script.js"></script>
+  <main><section class="page-hero"><div class="container"><p class="section-label">LEARNING</p><h1>今日から学ぶ</h1><p class="lead">気になるキーワードから、看護・医療の情報を探せます。</p></div></section><section class="page-content learning-content container">
+    <div class="learning-search" role="search">
+      <section class="recommended-learning" aria-labelledby="recommended-title"><h2 id="recommended-title">今日の記録からおすすめ</h2><div id="recommended-keywords" class="keyword-list" aria-live="polite"></div><p id="recommended-message" class="recommended-message"></p></section>
+      <label for="article-search">看護・医療記事を検索</label>
+      <div class="search-controls"><input id="article-search" type="search" placeholder="例：褥瘡、糖尿病、認知症、採血" autocomplete="off"><button class="button search-button" type="button" id="search-button">検索する</button></div>
+      <div class="popular-keywords" aria-label="キーワード"><span>おすすめキーワード</span><div class="keyword-list"><button type="button" data-keyword="認知症">認知症</button><button type="button" data-keyword="糖尿病">糖尿病</button><button type="button" data-keyword="褥瘡">褥瘡</button><button type="button" data-keyword="感染対策">感染対策</button><button type="button" data-keyword="採血">採血</button><button type="button" data-keyword="転倒予防">転倒予防</button></div></div>
+      <section class="personal-keywords" aria-labelledby="personal-keywords-title">
+        <div class="personal-keywords-heading"><h2 id="personal-keywords-title">わたしのキーワード</h2><button type="button" class="add-keyword-button" id="show-keyword-form">＋自分のキーワードを追加</button></div>
+        <form id="keyword-form" class="keyword-form" hidden><label for="custom-keyword">キーワード</label><div class="keyword-form-controls"><input id="custom-keyword" type="text" maxlength="30" placeholder="例：訪問看護" autocomplete="off"><button class="button" type="submit">追加する</button></div><p id="keyword-form-message" class="keyword-form-message" role="status" aria-live="polite"></p></form>
+        <div id="custom-keywords" class="keyword-list" aria-live="polite"></div><p id="custom-keywords-empty" class="custom-keywords-empty">まだ登録されていません。</p>
+      </section>
+    </div>
+    <div id="article-results" class="article-results" aria-live="polite"></div>
+    <a class="back-link" href="index.html">← トップへ戻る</a>
+  </section></main>
+  <footer class="site-footer"><p>&copy; <span id="current-year">2026</span> 子育てナース</p></footer><script src="js/script.js"></script><script src="js/learning.js"></script>
 </body>
 </html>
